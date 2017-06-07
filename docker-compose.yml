@@ -1,0 +1,41 @@
+authservice:
+    image: techmid/authservice
+    ports:
+     - "8001:8001"
+catalogueservice:
+  image: techmid/catalogueservice
+  hostname: catalogueservice
+ # links:
+#    - authservice
+#    - onlineshopping
+  ports:
+    - "8022:8022"
+orderservice:
+  image: techmid/orderservice
+  hostname: orderservice
+ # links:
+#    - authservice
+#    - onlineshopping
+ #   - catalogueservice
+  ports:
+    - "8088:8088"
+shippingservice:
+  image: techmid/shippingservice
+  hostname: shippingservice
+ # links:
+ #   - authservice
+#    - sampleservice
+#    - catalogueservice
+#    - sumcalc
+  ports:
+    - "8084:8084"
+onlineshopping:
+  image: techmid/onlineshopping
+  hostname: onlineshopping
+  links:
+    - authservice
+    - catalogueservice
+    - orderservice
+    - shippingservice
+  ports:
+    - "8000:8000"
