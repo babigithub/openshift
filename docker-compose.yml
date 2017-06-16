@@ -30,7 +30,7 @@ shippingservice:
   ports:
     - "8084:8084"
 onlineshopping:
-  image: techmid/onlineshopping
+  image: techmid/onlineshoppingcart
   hostname: onlineshopping
   links:
     - authservice
