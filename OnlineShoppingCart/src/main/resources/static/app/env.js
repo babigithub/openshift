@@ -10,10 +10,10 @@
 
   // API url
   //window.__env.authserviceUrl = 'http://localhost:8001';
-  window.__env.authserviceUrl = 'http://authservice:8001';
-  window.__env.catalogueserviceUrl = 'http://catalogueservice:8022';
-  window.__env.orderserviceUrl = 'http://orderservice:8088';
-  window.__env.shippingserviceUrl = 'http://shippingservice:8084';
+  window.__env.authserviceUrl = 'http://authservice:8080';
+  window.__env.catalogueserviceUrl = 'http://catalogueservice:8080';
+  window.__env.orderserviceUrl = 'http://orderservice:8080';
+  window.__env.shippingserviceUrl = 'http://shippingservice:8080';
 
   // Base url
   window.__env.baseUrl = '/';
